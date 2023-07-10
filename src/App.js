@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { css } from '@emotion/react';
 
+// Function to generate random color codes.
 const generateRandomColor = () => {
   const letters = '0123456789ABCDEF';
   let color = '#';
@@ -25,6 +26,7 @@ const App = () => {
     { color: generateRandomColor(), style: { pcGridColumn: '7/9', pcGridRow: '7/8', spGridColumn: '2/3', spGridRow: '6/7' } },
   ]);
 
+  // Function to randomly change the color of the box on click.
   const handleBoxClick = () => {
     const newBoxes = boxes.map((box) => ({
       ...box,
